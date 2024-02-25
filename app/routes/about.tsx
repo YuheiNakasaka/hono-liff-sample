@@ -7,18 +7,17 @@ const className = css`
 `;
 
 export default createRoute((c) => {
-  const name = c.req.query("name") ?? "Hono";
   return c.render(
     <Auth>
       <div class={className}>
-        <h1>Hello, {name}!</h1>
+        <h1>About Page</h1>
         <ul>
           <li>
-            <a href="/about">About</a>
+            <a href="/">Home</a>
           </li>
         </ul>
       </div>
     </Auth>,
-    { title: name }
+    { title: "About" }
   );
 });
